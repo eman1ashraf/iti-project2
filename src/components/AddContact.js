@@ -9,7 +9,7 @@ function AddContact(){
         const emailV =event.target.elements.email.value;
         if(nameV.trim().length==0){
             setisNameIsInvalid(true)
-            return
+        
 
         }
         fetch("https://jsonplaceholder.typicode.com/users",{
@@ -42,11 +42,17 @@ function AddContact(){
             <label for="mail">email</label>
             <input type="text" class="form-control" placeholder="Enter your email" name="email"></input>
         </div>
-     
+    <div className="m-2">
+    <button type="submit" class="btn btn-primary mx-auto d-block" id="bi">add</button>
+    </div>
     </form>
  
-    
     </div>
+   
+    
+    </>)
+}
+export default AddContact
     <button type="submit" class="btn btn-primary mx-auto d-block" id="bi">Register</button>
     
     </>)
